@@ -1,0 +1,45 @@
+.profile-pic-section{
+    padding:10px;
+    i{
+      cursor: pointer;
+    }
+    .drop-section{
+      position: absolute;
+      height:100%;
+      width:100%;
+      background-color: white;
+    }
+    .main-image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:hover .overlay, &:hover input, &:hover label{
+        opacity: 1;
+      }
+      .overlay{
+        opacity: 0;
+        position: absolute;
+        height:150px;
+        width:150px;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 50%;
+        transition: opacity 200ms ease-in-out;
+      }
+      input,label{
+        opacity: 0;
+        position: absolute;
+        transition: opacity 200ms ease-in-out;
+      }
+      input{
+        width:0.1px;
+        z-index: -1;
+      }
+      label{
+        font-size: 100px;
+        font-weight: 900;
+        color:white;
+      }
+    }
+  }
